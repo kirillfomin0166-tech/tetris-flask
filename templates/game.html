@@ -1,0 +1,33 @@
+<h1>Тетрис</h1>
+
+<button id="soundToggle">🔊 Звук</button>
+
+<div class="game-wrapper">
+
+    <div class="left-panel">
+        <canvas id="tetris" width="240" height="400"></canvas>
+
+        <div id="mobile-controls">
+            <button onclick="mobileLeft()">⬅️</button>
+            <button onclick="mobileRotate()">🔄</button>
+            <button onclick="mobileRight()">➡️</button>
+            <button onclick="mobileDown()">⬇️</button>
+        </div>
+    </div>
+
+    <div class="right-panel">
+        <div class="score-box">
+            Очки: <span id="score">0</span><br>
+            Лучший: <span id="best">0</span>
+        </div>
+
+        <h3>Следующая</h3>
+        <canvas id="next" width="80" height="80"></canvas>
+    </div>
+
+</div>
+
+<a href="/">← В меню</a>
+
+<script src="{{ url_for('static', filename='tetris.js') }}" defer></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='tetris.css') }}">

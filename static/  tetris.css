@@ -1,0 +1,81 @@
+/* БАЗОВОЕ РАСПОЛОЖЕНИЕ */
+.game-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+/* МОБИЛЬНЫЕ КНОПКИ */
+#mobile-controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#mobile-controls button {
+    padding: 12px 16px;
+    font-size: 22px;
+    border-radius: 8px;
+}
+
+/* АДАПТАЦИЯ ПОД МОБИЛКИ */
+@media (max-width: 600px) {
+
+    /* ВЕРХ НИЗ — вместо двух колонок */
+    .game-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* канвас уменьшается */
+    #tetris {
+        width: 200px;
+        height: 330px;
+    }
+
+    #next {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* кнопки больше */
+    #mobile-controls button {
+        padding: 16px 20px;
+        font-size: 28px;
+    }
+
+    /* текст мелкий и компактный */
+    .score-box {
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+/* АДАПТАЦИЯ ПОД СУПЕР-МАЛЕНЬКИЕ (iPhone SE / 320px) */
+@media (max-width: 360px) {
+
+    #tetris {
+        width: 160px;
+        height: 260px;
+    }
+
+    #mobile-controls button {
+        padding: 14px 16px;
+        font-size: 22px;
+    }
+
+    #next {
+        width: 50px;
+        height: 50px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    #soundToggle {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}
